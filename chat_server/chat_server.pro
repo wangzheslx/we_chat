@@ -1,5 +1,5 @@
 QT       += core gui
-
+QT       += core gui network
 greaterThan(QT_MAJOR_VERSION, 4): QT += widgets
 RC_ICONS = icon.ico
 DESTDIR = ./bin
@@ -19,6 +19,7 @@ DEFINES += QT_DEPRECATED_WARNINGS
 
 SOURCES += \
     global.cpp \
+    httpmgr.cpp \
     logindialog.cpp \
     main.cpp \
     mainwindow.cpp \
@@ -26,9 +27,11 @@ SOURCES += \
 
 HEADERS += \
     global.h \
+    httpmgr.h \
     logindialog.h \
     mainwindow.h \
-    regstdialog.h
+    regstdialog.h \
+    singleton.h
 
 FORMS += \
     logindialog.ui \

@@ -250,6 +250,7 @@ Makefile: ../chat_server/chat_server.pro ../../../Qt5.14.2/5.14.2/mingw73_64/mks
 		../chat_server/chat_server.pro \
 		../../../Qt5.14.2/5.14.2/mingw73_64/lib/Qt5Widgets.prl \
 		../../../Qt5.14.2/5.14.2/mingw73_64/lib/Qt5Gui.prl \
+		../../../Qt5.14.2/5.14.2/mingw73_64/lib/Qt5Network.prl \
 		../../../Qt5.14.2/5.14.2/mingw73_64/lib/Qt5Core.prl \
 		../../../Qt5.14.2/5.14.2/mingw73_64/lib/qtmain.prl \
 		../../../Qt5.14.2/5.14.2/mingw73_64/mkspecs/features/build_pass.prf \
@@ -435,6 +436,7 @@ Makefile: ../chat_server/chat_server.pro ../../../Qt5.14.2/5.14.2/mingw73_64/mks
 ../chat_server/chat_server.pro:
 ../../../Qt5.14.2/5.14.2/mingw73_64/lib/Qt5Widgets.prl:
 ../../../Qt5.14.2/5.14.2/mingw73_64/lib/Qt5Gui.prl:
+../../../Qt5.14.2/5.14.2/mingw73_64/lib/Qt5Network.prl:
 ../../../Qt5.14.2/5.14.2/mingw73_64/lib/Qt5Core.prl:
 ../../../Qt5.14.2/5.14.2/mingw73_64/lib/qtmain.prl:
 ../../../Qt5.14.2/5.14.2/mingw73_64/mkspecs/features/build_pass.prf:
