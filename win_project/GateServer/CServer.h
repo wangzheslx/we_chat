@@ -1,24 +1,16 @@
 #pragma once
-
-#include <boost/beast/http.hpp>
-#include <boost/beast.hpp>
-#include <boost/asio.hpp>
-#include <memory>
-
-namespace beast = boost::beast;         // from <boost/beast.hpp>
-namespace http = beast::http;           // from <boost/beast/http.hpp>
-namespace net = boost::asio;            // from <boost/asio.hpp>
-using tcp = boost::asio::ip::tcp;       // from <boost/asio/ip/tcp.hpp>
+#include "const.h"
 
 
-class CServer:public std::enable_shared_from_this<CServer>
+
+class CServer:public std::enable_shared_from_this<CServer>//奇异递归模板
 {
 public:
-	CServer(boost::asio::io_context& ioc, unsigned short& port);
+	CServer(boost::asio::io_context& ioc, unsigned short& port);//监听事件循环
 	void Start();
 private:
-	tcp::acceptor _acceptor;
-	net::io_context& _ioc;
-	tcp::socket _socket;
+	tcp::acceptor _acceptor;//接收器
+	net::io_context& _ioc;//上下文   引用，保证单个实例
+	tcp::socket _socket;//socket复用，转给连接
 };
 
