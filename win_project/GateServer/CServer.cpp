@@ -20,7 +20,8 @@ void CServer::Start()//¼àÌý
 			self->Start();
 		}
 		catch (std::exception& exp) {
-
+			std::cout << "exception is " << exp.what() << std::endl;
+			self->Start();
 		}
 		});
 }

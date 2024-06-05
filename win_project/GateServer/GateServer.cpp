@@ -3,10 +3,16 @@
 #include <json/value.h>
 #include <json/reader.h>
 #include "CServer.h"
+#include "ConfigMgr.h"
 int main()
 {
+    ConfigMgr gCfgMgr;
+    std::string gate_port_str = gCfgMgr["GateServer"]["Port"];
+    unsigned short gate_port = atoi(gate_port_str.c_str());
+
     try {
         unsigned short port = static_cast<unsigned short>(8080);
+        std::cout << "Gate Server listen on port :8080\n";
         net::io_context ioc{ 1 };
         boost::asio::signal_set signals(ioc, SIGINT, SIGTERM);
         //信号集异步等待
