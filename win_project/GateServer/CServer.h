@@ -11,6 +11,6 @@ public:
 private:
 	tcp::acceptor _acceptor;//接收器
 	net::io_context& _ioc;//上下文   引用，保证单个实例
-	tcp::socket _socket;//socket复用，转给连接
+	//tcp::socket _socket;//socket复用，转给连接 不用
 };
 
